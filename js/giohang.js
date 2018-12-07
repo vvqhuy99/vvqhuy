@@ -70,7 +70,7 @@ function xoa_all() {
 // }
 
  function tinh_tien(){
-	var chieudai=localStorage.length;
+	var chieudai=localStorage.length-1;
 	var sum=0;
 	for(i=0;i<chieudai;i++){
 		var boxone="box_"+i;
