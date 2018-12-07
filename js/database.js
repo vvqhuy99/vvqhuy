@@ -1,4 +1,4 @@
-
+// Cu huy
 function SanPham(masp,theloai,gia, tensp, image) {
 		this.masp = masp;
 		this.theloai = theloai;
