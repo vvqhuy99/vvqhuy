@@ -8,7 +8,7 @@ function giohang(){
                 danh_muc: thong_tin[0],
                 ma_sp: thong_tin[1]
             };
-			localStorage.setItem("box_" + localStorage.length, JSON.stringify(obj));
+			localStorage.setItem("box_" + localStorage.length-1, JSON.stringify(obj));
             alert("Bạn đã thêm vào giỏ hàng thành công");
         });
     }
@@ -52,7 +52,7 @@ function load_vao_cart(){
 function xoa_all() {
 	var all=confirm('Bạn có muốn xóa không');
 	if(all==true){
-    	var temp = localStorage.length;
+    	var temp = localStorage.length-1;
     	for (var i = 0; i < temp; i++) {
         	console.log('temp = ' + temp);
         		if (localStorage.getItem('box_' + i)) {
