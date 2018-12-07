@@ -16,6 +16,7 @@ function giohang(){
 /*Load gio hang*/
 function load_vao_cart(){
 	var chieudai=localStorage.length;
+	var sp = db.layDsSP()
 	for(i=0;i<chieudai;i++){
 		var boxone="box_"+i;
 		if(localStorage.getItem(boxone)){

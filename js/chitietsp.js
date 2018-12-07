@@ -3,6 +3,7 @@ function Chi_tiet_sp(){
 	var loai=diachi.split("?");
 	var loaisp=loai[1];
     var i=loai[2];
+    var sp = db.layDsSP()
     for(i=0;i<sp.length;i++){
         if(sp[i].theloai == loaisp && sp[i].masp==loai[2]){
             document.getElementById('hinhsp').innerHTML='<img src="'+sp[i].image+'">';
