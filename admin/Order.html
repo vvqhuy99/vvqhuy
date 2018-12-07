@@ -1,0 +1,322 @@
+<html><head>
+	<title>Giao dien Admin</title>
+	<link rel="stylesheet" type="text/css" href="../css/admin.css">
+	<link rel="stylesheet" type="text/css" href="Order.css">
+	<script  src="Order.js"></script>
+</head>
+<body>
+	<div id="khungtrang">
+		<div id="header">
+			<div id="firts"><a href="admin.html"><img src="hinhanh/start.png" sss="" width="200px" height="40px"></a>
+			</div>
+			<div class="search">
+			<form class="example">
+				<input type="text" name="search" placeholder="Search...">
+				<button type="submit"><i class="fa fa-search"><img src="hinhanh/tk.png" width="30px" height="15px"></i></button>
+			</form>
+			</div>
+			<div class="hinhanh">
+				<div class="hinhanh3">
+					<a class="a1" href="#">Log out<img class="m1" src="hinhanh/logout.jpg" width="10px" height="15px"> </a>
+				</div>
+				<div class="hinhanh2">
+					<a class="a1" href="#">Thiet Lap<img class="m1" src="hinhanh/thietlap.png" width="10px" height="15px"></a>
+				</div>
+				<div class="hinhanh1">
+					<a class="a1" href="#">Thong Bao<img class="m1" src="hinhanh/chuong.png" width="10px" height="15px"></a>
+				</div>
+			</div>
+		</div>
+		<div class="left">
+			<p id="noidung">
+			<div class="user">
+				<a class="a2" id="order" href="Order.html">Thông tin khách hàng</a>
+			</div>
+			<div class="pages">
+				<a class="a2" href="admin.html">Về quản lý</a>
+			</div>	
+			</p>		
+		</div>
+		<div class="right">
+			<div class="right-left">
+				<div class="schedule">
+					<a class="a3" href="#">Schedule<img class="m4" src="hinhanh/new.png"></a>
+				</div>
+				<div class="report">
+					<a class="a3" href="#"><img class="m3" src="hinhanh/report.png">Reports</a>
+				</div>
+				<div class="score">
+					<a class="a3" href="#"><img class="m3" src="hinhanh/score.png">Score</a>
+				</div>
+			</div>
+			<div class="right-right">
+				<div class="profile"><a href="#"><img src="hinhanh/profile.png"></a></div>
+				<div class="supp"><a class="a5" href="#">Support</a></div>
+			</div>
+			<div class="right-bottom" style="float: left; margin-left: 30px;  margin-top: 20px;
+			">
+				<table class="danhsachsp" style="">
+					<tr >
+						<th >Ma DH</th>
+						<th class="hide" style="display: none;">Ten SP</th>
+						<th >So Tien</th>
+						<th>Ten KH</th>
+						<th class="hide" style="display: none;">SĐT</th>
+						<th class="hide" style="display: none;">Dia Chi</th>
+						<th>Trang Thai DH</th>
+						<th >Xac Nhan DH</th>
+						<th>Chi tiet</th>
+					</tr>
+					<tr >
+						<th >1</th>
+						<th class="hide" style="display: none;">Iphone 5S</th>
+						<th >5.000.000</th>
+						<th>Nguyen Van A</th>
+						<th class="hide" style="display: none;">0123456789</th>
+						<th class="hide" style="display: none;">3 Nguyen Hoang</th>
+						<th class="status" style="color: green;">Chưa Xử Lý...</th>
+						<th class="change">
+							<button  onclick="myFunction(this)">Chap nhan</button>
+							<button  onclick="myFu(this)">Xoa</button>
+						</th>
+						<th rowspan="2">
+							<button  onclick="hienHide(this)">Chi Tiet DH</button>
+						</th>
+
+					</tr>
+					<tr >
+						<th >2</th>
+						<th class="hide" style="display: none;">Samsung S9</th>
+						<th >7.000.000</th>
+						<th>Nguyen Van B</th>
+						<th class="hide" style="display: none;">0123456789</th>
+						<th class="hide" style="display: none;">14 Thai Son</th>
+						<th class="status" onchange="" style="color: green;">Chưa Xử Lý...</th>
+						<th class="change">
+							<button onclick="myFunction(this)">Chap nhan</button>
+							<button  onclick="myFu(this)">Xoa</button>
+						</th>
+						
+					</tr>
+					
+
+				</table>
+			</div>
+		</div>
+		<div class="footer">
+            <div class="end">
+                <div id="about-me">
+                    <p style="color: red">THÔNG TIN</p>
+                    <p>Nguyễn Huy Thắng<br>
+                        Võ Văn Quang Huy<br>
+                        Đại học Sài Gòn<br>
+                        Khoa Công nghệ thông tin
+                    </p>
+                </div>
+                </div>
+            </div>
+        </div>
+	</div> 
+
+<!-- <div class="popup" id="popup">
+	<div class="title"><h2> Add Product</h2></div>
+	<br>
+	<ul>
+		<li><label>Ma Sanpham</label><span><input class="thuoctinh" type="text" name="masp"></span></li>
+		<li><label>The Loai Sanpham</label><span><select class="thuoctinh">
+			<option value=""></option>
+			<option value="iphone">Iphone</option>
+			<option value="samsung">Samsung</option>
+			<option value="oppo">Oppo</option>
+			<option value="xiaomi">Xiaomi</option>
+			<option value="ipad">Ipad</option>
+		</select></span></li>
+		<li><label> Gia</label><span><input class="thuoctinh" type="text" name="gia"></span></li>
+		<li><label>Ten Sanpham</label><span><input class="thuoctinh" type="text" name="tensp"></span></li>
+		<li><label> Img</label>
+			<span>
+				<input type="file" id="selectedFile" accept="image/*" onchange="loadFile(event)" style="display: none;">
+				<input type="button" value="Browse..." onclick="document.getElementById('selectedFile').click();" />
+				<img class="thuoctinh" id="output"/>
+			</span>
+		</li>
+		<li><button class="action" onclick="themSP()">Add</button><button onclick="closeAddProduct()">Cancel</button></li>
+	</ul>
+</div> -->
+
+
+<style type="text/css">
+	.popup{
+		position: fixed;
+		width: 400px;
+		/*height: 300px;*/
+		background-color: white;
+		border: 2px solid blue;
+		padding: 15px 100px;
+
+	}
+	.popup li {
+		list-style: none;
+	}
+	.popup label {
+		display: inline-block;
+		/*display: block;*/
+		width: 170px;
+		margin-bottom: 5px;
+	}
+	.popup button{
+		margin-top: 20px;
+		float: right;
+		background-color: orange;
+		height: 30px;
+		width: 120px;
+	}
+</style>
+</body>
+<script type="text/javascript">
+	
+</script>
+<!-- <script type="text/javascript">
+	//chon anh
+	var loadFile = function(event) {
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+  };
+
+	var editingSP = null
+	function hienPopUp(spSua){
+		var popup = document.querySelector('#popup')
+		popup.style.display = 'block'
+		popup.style.top = (document.querySelector('body').clientHeight - popup.clientHeight)/2 + "px"
+		popup.style.left = (document.querySelector('body').clientWidth - popup.clientWidth)/2 + "px"
+
+		popup.querySelector('button.action').innerText = "Add"
+		popup.querySelector('button.action').setAttribute('onclick', "themSP()")
+		// Xoa trang form add sp
+		var fields = popup.querySelectorAll('.thuoctinh')
+		for(var item of fields.values()) { 
+		  console.log(item.nodeName); 
+		  if (item.nodeName=='IMG')  {
+		  	item.src=''
+		  }else{
+		  	item.value = ""
+		  }
+		}
+		// Truong hop edit, fill thuoc tinh SP vo form
+		if (!spSua) return 
+		// Luu vet sp dang sua
+		editingSP = spSua
+		var thuocTinhSP = spSua.parentElement.parentElement.querySelectorAll('th')
+
+		popup.querySelector('button.action').innerText = "Save"
+		popup.querySelector('button.action').setAttribute('onclick', "luuSP()")
+		// Lap qua danh sach th de lay data 
+		thuocTinhSP.forEach(function(value, index){
+			if (fields[index]){
+				console.log(value.childElementCount, value)
+				// Neu th co child thi co nghia la cell hinh anhd
+				if (value.childElementCount > 0)
+					fields[index].src = value.querySelector('img').src
+				// nguoc lai thi la text
+				else{
+					if (fields[index].nodeName=='SELECT')
+						fields[index].value = value.getAttribute('data')
+					else
+						fields[index].value = value.innerText
+				}
+
+			}
+		})
+
+	}
+	document.querySelector("#addproduct").addEventListener("click", function(event) {
+		event.preventDefault()
+		hienPopUp()
+		return false
+	})
+
+	// showAddProduct()
+	function closeAddProduct(){
+		
+		var popup = document.querySelector('#popup')
+		popup.style.display = 'none'
+	}
+	function xoaSP(a){
+		a.parentElement.parentElement.remove()
+	}
+	function suaSP(sp){
+		//console.log(sp.parentElement.parentElement.querySelectorAll('th'))
+		hienPopUp(sp)
+	}
+	function luuSP(fields){
+		var popup = document.querySelector('#popup')
+		var fields = popup.querySelectorAll('.thuoctinh')
+		
+		var thuocTinhSP = editingSP.parentElement.parentElement.querySelectorAll('th')
+		thuocTinhSP.forEach(function(value, index){
+			if (fields[index]){
+				console.log(value.childElementCount, value)
+				// Neu th co child thi co nghia la cell hinh anhd
+				if (value.childElementCount > 0)
+					value.querySelector('img').src = fields[index].src
+				// nguoc lai thi la text
+				else{
+
+					if (fields[index].nodeName=='SELECT'){
+						console.log(1111, fields[index].value,fields[index].querySelector('option[value="'+fields[index].value+'"]').innerText )
+
+						value.setAttribute('data', fields[index].value)
+						value.innerText = fields[index].querySelector('option[value="'+fields[index].value+'"]').innerText
+					}
+					else
+						value.innerText = fields[index].value
+				}
+
+			}
+		})
+		closeAddProduct()
+	}
+	function themSP(fields){
+		var popup = document.querySelector('#popup')
+		var fields = popup.querySelectorAll('.thuoctinh')
+		var index = 0
+
+		var tr = document.createElement('tr')
+		tr.innerHTML =  '<tr >'+
+						'<th >'+fields[index++].value+'</th>'+
+						'<th data="'+fields[index].value+'">'+fields[index].querySelector('option[value="'+fields[index++].value+'"]').innerText+'</th>'+
+						'<th >'+fields[index++].value+'</th>'+
+						'<th >'+fields[index++].value+'</th>'+
+						'<th ><img src="'+fields[index++].getAttribute('src')+'"></th>'+
+						'<th >'+
+						'	<input type="button" onclick="suaSP(this)" name="sua" value="Edit">'+
+						'	<input type="button" onclick="xoaSP(this)" name="Xoa" value="Delete">'+
+						'</th>'+
+					'</tr>'
+		document.querySelector('.danhsachsp tbody').appendChild(tr)
+		// var thuocTinhSP = editingSP.parentElement.parentElement.querySelectorAll('th')
+		// thuocTinhSP.forEach(function(value, index){
+		// 	if (fields[index]){
+		// 		console.log(value.childElementCount, value)
+		// 		// Neu th co child thi co nghia la cell hinh anhd
+		// 		if (value.childElementCount > 0)
+		// 			value.querySelector('img').src = fields[index].value
+		// 		// nguoc lai thi la text
+		// 		else{
+
+		// 			if (fields[index].nodeName=='SELECT'){
+		// 				console.log(1111, fields[index].value,fields[index].querySelector('option[value="'+fields[index].value+'"]').innerText )
+
+		// 				value.setAttribute('data', fields[index].value)
+		// 				value.innerText = fields[index].querySelector('option[value="'+fields[index].value+'"]').innerText
+		// 			}
+		// 			else
+		// 				value.innerText = fields[index].value
+		// 		}
+
+		// 	}
+		// })
+		closeAddProduct()
+	}
+</script> -->
+</html>

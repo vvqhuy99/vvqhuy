@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web ban hang</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <script src="js/database.js"></script>
+   <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="khungtrang">
+        <div class="header">
+                <div class="logo">
+                        <a href="index.html"><img src="img/logo.png" width="200px" height="40px" style="margin:30px;"></a>
+                      </div> 
+                      <div class="search">
+                        <form class="example">
+                        <input type="text" placeholder="Search.." name="search" id="val_search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                      </div>
+                      <div class="cart">
+                        <ul>
+                          <li><a href="giohang.html">GIỎ HÀNG <img src="img/cart.png"></a></li>
+                          <li><img src="img/dk.png"> <a href="dangky.html">ĐĂNG KÝ</a></li>
+                          <li><img src="img/dn.png"> <a href="dangnhap.html">ĐĂNG NHẬP</a></li>
+                        </ul>
+                      </div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html" >TRANG CHỦ</a></li>
+                <li><a href="#">GIỚI THIỆU</a></li>
+                <li><a href="#">TIN TỨC</a></li>
+                <li><a href="#">LIÊN HỆ</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div id="left">
+                <p style="text-align:center; padding: 10px 0px;">LOẠI SẢN PHẨM</p>
+                <ul>
+                        <li><img src="img/apple.png"><a href="index.html?iphone?0?#left">IPHONE</a></li>
+                        <li><img src="img/samsungs.png"><a href="index.html?samsung?16?#left">SAMSUNG</a></li>
+                        <li><img src="img/mis.png"><a href="index.html?xiaomi?25?#left">XIAOMI</a></li>
+                        <li><img src="img/op.png"><a href="index.html?oppo?34?#left">OPPO</a></li>
+                        <li><img src="img/ibb.png"><a href="index.html?ipad?43?#left">IPAD</a></li>
+                </ul>
+
+            </div>
+            <div class="right">
+                
+                <div class="body">
+                    <center><h1>ĐĂNG NHẬP TÀI KHOẢN</h1></center>
+                    <form name="xuly" method="post"  class="thongtinkh">
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tr class="table">
+                                <td class="cot1"><p>Tên đăng nhập:</p></td>
+                                <td class="cot2"><p><input type="text" name="taikhoan" id="username1" placeholder="Tên đăng nhập">*</p></td>
+                            </tr>
+                            <tr class="table">
+                                 <td class="cot1"><p>Mật khẩu:</p></td>
+                                <td class="cot2"><p><input type="password" name="matkhau" id="pass1" placeholder="Nhập mật khẩu">*</p></td>
+                            </tr>
+                                <td colspan="2" class="dong1">
+                            <center><input type="button" value="Đăng Nhập" name="dangnhap" class="dk" onclick="kiemtradangnhap()"> 
+                                <a href="dangky.html">
+                                    <input type="button" value="Đăng ký" name="dangky">
+                                </a>
+                                </center>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+        </div> 
+        <div class="footer">
+                <hr>
+                <img src="img/footer.png">
+            <div class="end">
+                <div id="support">
+                    <p style="color: red">HỖ TRỢ KHÁCH HÀNG</p>
+                    <p>
+                    Hotline đặt hàng: 1800-6963<br>
+                    (Miễn phí , 8-21h kể cả T7, CN)<br>
+                    Hotline: 1900-6035<br>
+                    (1000đ/phút , 8-21h kể cả T7, CN)</p>
+                </div>
+                <div id="about-me">
+                    <p style="color: red">THÔNG TIN</p>
+                    <p>Nguyễn Huy Thắng<br>
+                        Võ Văn Quang Huy<br>
+                        Nguyễn văn Thành<br>
+                        Đại học Sài Gòn<br>
+                        Khoa Công nghệ thông tin
+                    </p>
+                </div>
+                <div id="mang-xa-hoi">
+                    <p style="color: red">KẾT NỐI VỚI CHÚNG TÔI</p>
+                    <div style="float: left; margin-left: 75px; margin-right: 10px;"><a href="https://www.facebook.com/vovanquanghuy" target="_blank"><img src="img/facebook.png" width="40px" height="40px"></a></div>
+                    <div style="float: left; margin-right: 10px;"><a href="https://id.zalo.me/account/login?continue=https://oa.zalo.me/manage/dashboard "target="_blank"><img src="img/zalo.png" width="40px" height="40px"></a></div>
+                    <div style="float: left;"><a href="https://www.youtube.com/?gl=VN" target="_blank"><img src="img/youtube.png" width="40px" height="40px"></a></div>
+                </div>
+                <div id="thanh-toan">
+                    <p style="color: red;">PHƯƠNG THỨC THANH TOÁN</p>
+                    <div>
+                        <div style="float: left; margin-left: 60px; margin-right: 15px;"><img src="img/visa.png"></div>
+                        <div style="float: left; margin-right: 15px;"><img src="img/2tron.png"></div>
+                        <div style="float: left;"><img src="img/jcb.png"></div>
+                        <div style="float: left; margin-left: 60px; margin-right: 15px; margin-top: 15px;"><img src="img/money.png"></div>
+                        <div style="float: left; margin-right: 15px; margin-top: 15px; " ><img src="img/internet.png"></div>
+                        <div style="float: left; margin-right: 15px; margin-top: 15px;"><img src="img/tragop.png"></div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+</html>

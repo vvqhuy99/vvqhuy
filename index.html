@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web ban hang</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="khungtrang">
+        <div class="header">
+                <div class="logo">
+                        <a href="index.html"><img src="img/logo.png" width="200px" height="40px" style="margin:30px;"></a>
+                      </div> 
+                      <div class="search">
+                        <form class="example">
+                        <input type="text" placeholder="Search.." id="val_search">
+                        <button type="button" onclick="search()"><i class="fa fa-search"></i></button>
+                        </form>
+                      </div>
+                      <div class="cart">
+                        <ul id="mycart">
+                          <li><a href="giohang.html">GIỎ HÀNG <img src="img/cart.png"></a></li>
+                          <li><img src="img/dk.png"> <a href="dangky.html" id="singup">
+                          </a></li>
+                          <li><img src="img/dn.png"> <a href="dangnhap.html" id="login"></a></li>
+                          
+                        </ul>
+                      </div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html" >TRANG CHỦ</a></li>
+                <li><a href="#">GIỚI THIỆU</a></li>
+                <li><a href="#">TIN TỨC</a></li>
+                <li><a href="#">LIÊN HỆ</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div id="banner">
+                <div id="ad_1"></div>
+                <div id="ad_2">
+                        <img src="img/banner2.png">
+                        <img src="img/banner4.png">
+                        <img src="img/banner3.jpg">
+                    </div> 
+            </div>
+            <div id="left">
+                    <p style="text-align:center; padding: 10px 0px;">LOẠI SẢN PHẨM</p>
+                    <ul>
+                        <li><img src="img/apple.png"><a href="index.html?iphone?0?#left">IPHONE</a></li>
+                        <li><img src="img/samsungs.png"><a href="index.html?samsung?16?#left">SAMSUNG</a></li>
+                        <li><img src="img/mis.png"><a href="index.html?xiaomi?25?#left">XIAOMI</a></li>
+                        <li><img src="img/op.png"><a href="index.html?oppo?34?#left">OPPO</a></li>
+                        <li><img src="img/ibb.png"><a href="index.html?ipad?43?#left">IPAD</a></li>
+                    </ul>
+                    <p style="text-align:center;margin-top:20px;">Thông tin khuyến mãi</p>
+                <img src="img/banner0.jpg" width="210px" height="500px" style="margin-top:10px;">
+            </div>
+            <div class="right">
+                <div class="loc" style="margin-top:10px; margin-bottom:10px;">
+                    <form>
+                        Lọc theo tên:<input type="text" style="padding:10px 20px;" id="noidung">
+                        <select name="locgia" id="giatim" style="padding:10px 20px;font-size: 14px">
+                            <option value="0">---Chọn-----</option>
+                            <option value="1">1.000.000-5.000.000</option>
+                            <option value="5">5.000.000-10.000.000</option>
+                            <option value="10">10.000.000-25.000.000</option>
+                        </select>
+                        <select name="locgia" id="loaitim" style="padding:10px 20px;font-size: 14px">
+                                <option value="0">---Chọn-----</option>
+                                <option value="iphone">Iphone</option>
+                                <option value="samsung">Samsung</option>
+                                <option value="xiaomi">Xiaomi</option>
+                                <option value="oppo">OPPO</option>
+                                <option value="ipad">Ipad</option>
+                        </select>
+                        <button type="button" id="locgia" onclick="timkiemnangcao()">Tìm kiếm</button>
+                    </form>
+                </div>
+                <div class="tieude">
+                    <div id="tentheloai"></div>
+                </div>
+                <div id="cacspdienthoai">
+                </div>
+                <div id="sotrangcuatheloai">
+                </div>
+            </div>
+        </div> 
+        <div class="footer">
+            <hr>
+            <img id="banner_footer" src="img/footer.png">
+            <div class="end">
+                <div id="support">
+                    <p style="color: red">HỖ TRỢ KHÁCH HÀNG</p>
+                    <p>
+                    Hotline đặt hàng: 1800-6963<br>
+                    (Miễn phí , 8-21h kể cả T7, CN)<br>
+                    Hotline: 1900-6035<br>
+                    (1000đ/phút , 8-21h kể cả T7, CN)</p>
+                </div>
+                <div id="about-me">
+                    <p style="color: red">THÔNG TIN</p>
+                    <p>Nguyễn Huy Thắng<br>
+                        Võ Văn Quang Huy<br>
+                        Nguyễn văn Thành<br>
+                        Đại học Sài Gòn<br>
+                        Khoa Công nghệ thông tin
+                    </p>
+                </div>
+                <div id="mang-xa-hoi">
+                    <p style="color: red">KẾT NỐI VỚI CHÚNG TÔI</p>
+                    <div style="float: left; margin-left: 75px; margin-right: 10px;"><a href="https://www.facebook.com/vovanquanghuy" target="_blank"><img src="img/facebook.png" width="40px" height="40px"></a></div>
+                    <div style="float: left; margin-right: 10px;"><a href="https://id.zalo.me/account/login?continue=https://oa.zalo.me/manage/dashboard "target="_blank"><img src="img/zalo.png" width="40px" height="40px"></a></div>
+                    <div style="float: left;"><a href="https://www.youtube.com/?gl=VN" target="_blank"><img src="img/youtube.png" width="40px" height="40px"></a></div>
+                </div>
+                <div id="thanh-toan">
+                    <p style="color: red;">PHƯƠNG THỨC THANH TOÁN</p>
+                    <div>
+                        <div style="float: left; margin-left: 60px; margin-right: 15px;"><img src="img/visa.png"></div>
+                        <div style="float: left; margin-right: 15px;"><img src="img/2tron.png"></div>
+                        <div style="float: left;"><img src="img/jcb.png"></div>
+                        <div style="float: left; margin-left: 60px; margin-right: 15px; margin-top: 15px;"><img src="img/money.png"></div>
+                        <div style="float: left; margin-right: 15px; margin-top: 15px; " ><img src="img/internet.png"></div>
+                        <div style="float: left; margin-right: 15px; margin-top: 15px;"><img src="img/tragop.png"></div>
+
+                    </div>
+                    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="js/database.js"></script>
+    <script src="js/danhsach.js"></script>
+   <script src="js/main.js"></script>   
+   <script src="js/giohang.js"></script>
+</html>

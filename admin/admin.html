@@ -1,0 +1,386 @@
+<html><head>
+	<title>Giao dien Admin</title>
+	<link rel="stylesheet" type="text/css" href="../css/admin.css">
+	<!-- <link rel="stylesheet" type="text/css" href="../admin/Order.css"> -->
+	<script src="../js/database.js"></script>
+</head>
+<body>
+	<div id="khungtrang">
+		<div id="header">
+			<div id="firts"><a href="admin.html"><img src="hinhanh/start.png" sss="" width="200px" height="40px"></a>
+			</div>
+			<div class="search">
+			<form class="example">
+				<input type="text" name="search" placeholder="Search...">
+				<button type="submit"><i class="fa fa-search"><img src=".../hinhanh/tk.png" width="30px" height="15px"></i></button>
+			</form>
+			</div>
+			<div class="hinhanh">
+				<div class="hinhanh3">
+					<a class="a1" href="../index.html">Log out<img class="m1" src="hinhanh/logout.jpg" width="10px" height="15px"> </a>
+				</div>
+				<div class="hinhanh2">
+					<a class="a1" href="#">Thiet Lap<img class="m1" src="hinhanh/thietlap.png" width="10px" height="15px"></a>
+				</div>
+				<div class="hinhanh1">
+					<a class="a1" href="#">Thong Bao<img class="m1" src="hinhanh/chuong.png" width="10px" height="15px"></a>
+				</div>
+			</div>
+		</div>
+		<div class="left">
+			<p id="noidung" >
+			<div class="newproject">
+				<a class="a4" id="addproduct" href="#">Thêm Sản Phẩm</a>
+			</div>
+			<div class="user">
+				<a class="a2" id="order" href="Order.html">Thông Tin Khách Hàng</a>
+			</div>	
+			</p>		
+		</div>
+		<div class="right">
+			<div class="right-left">
+				<div class="schedule">
+					<a class="a3" href="#">Schedule<img class="m4" src="hinhanh/new.png"></a>
+				</div>
+				<div class="report">
+					<a class="a3" href="#"><img class="m3" src="hinhanh/report.png">Reports</a>
+				</div>
+				<div class="score">
+					<a class="a3" href="#"><img class="m3" src="hinhanh/score.png">Score</a>
+				</div>
+			</div>
+			<div class="right-right">
+				<div class="profile"><a href="#"><img src="hinhanh/profile.png"></a></div>
+				<div class="supp"><a class="a5" href="#">Support</a></div>
+			</div>
+			<div class="right-bottom" style="float: left; margin-left: 70px;  margin-top: 20px;
+			">
+				<table class="danhsachsp" style="">
+					<tr >
+						<th >Ma San Pham</th>
+						<th >The Loai San Pham</th>
+						<th >Gia San Pham</th>
+						<th >Ten San Pham</th>
+						<th >Img</th>
+						<th >Repair</th>
+					</tr>
+					<!-- <tr >
+						<th >05</th>
+						<th data="iphone">Iphone</th>
+						<th >3.000.000</th>
+						<th >Iphon 5S</th>
+						<th ><img src="../img/iphone/0.png" width="100px">	</th>
+						<th class="repair" >
+							<input type="button" onclick="suaSP(this)" name="sua" value="Edit">
+							<input type="button" onclick="xoaSP(this)" name="Xoa" value="Delete">
+						</th>
+					</tr>
+					<tr >
+						<th >05</th>
+						<th data="iphone">Samsung</th>
+						<th >8.000.000</th>
+						<th >Samsung 9S</th>
+						<th ><img src="../img/samsung/0.png" width="100px">	</th>
+						<th class="repair">
+							<input type="button" onclick="suaSP(this)" name="sua" value="Edit">
+							<input type="button" onclick="xoaSP(this)" name="Xoa" value="Delete">
+						</th>
+					</tr> -->
+					
+
+				</table>
+			</div>
+		</div>
+		<div class="footer">
+           
+
+            <div class="end">
+                <div id="about-me">
+                    <p style="color: red">THÔNG TIN</p>
+                    <p>Nguyễn Huy Thắng<br>
+						Võ Văn Quang Huy<br>
+						Nguyễn văn Thành<br>
+                        Đại học Sài Gòn<br>
+                        Khoa Công nghệ thông tin
+                    </p>
+                </div>
+                </div>
+            </div>
+        </div>
+	</div> 
+
+<div class="popup" id="popup" style="display: none;">
+	<div class="title"><h2> Add Product</h2></div>
+	<br>
+	<ul>
+		<li><label>Ma Sanpham</label><span><input class="thuoctinh" type="text" name="masp"></span></li>
+		<li><label>The Loai Sanpham</label><span><select class="thuoctinh">
+			<option value=""></option>
+			<option value="iphone">Iphone</option>
+			<option value="samsung">Samsung</option>
+			<option value="oppo">Oppo</option>
+			<option value="xiaomi">Xiaomi</option>
+			<option value="ipad">Ipad</option>
+		</select></span></li>
+		<li><label> Gia</label><span><input class="thuoctinh" type="text" name="gia"></span></li>
+		<li><label>Ten Sanpham</label><span><input class="thuoctinh" type="text" name="tensp"></span></li>
+		<li><label> Img</label>
+			<span>
+				<input type="file" id="selectedFile" accept="image/*" onchange="loadFile(event)" style="display: none;">
+				<input type="button" value="Browse..." onclick="document.getElementById('selectedFile').click();" />
+				<img class="thuoctinh hinh" id="output"/>
+			</span>
+		</li>
+		<li><button class="action" onclick="themSPClick()">Add</button><button onclick="closeAddProduct()">Cancel</button></li>
+	</ul>
+</div>
+
+
+<style type="text/css">
+	.popup{
+		position:absolute;
+		width: 450px;
+		/*height: 300px;*/
+		background-color: white;
+		border: 2px solid blue;
+		padding: 15px 100px;
+
+	}
+	.popup li {
+		list-style: none;
+	}
+	.popup label {
+		display: inline-block;
+		/*display: block;*/
+		width: 170px;
+		margin-bottom: 5px;
+	}
+	.popup button{
+		margin-top: 20px;
+		float: right;
+		background-color: orange;
+		height: 30px;
+		width: 120px;
+	}
+
+	.popup .hinh{
+		display: block;
+	    width: 105px;
+	    margin-left: 170px;
+	    border: 1px solid;
+	}
+	.danhsachsp tr th img{
+		width: 100px;
+	}
+
+</style>
+</body>
+<script type="text/javascript">
+	//chon anh
+	var loadFile = function(event) {
+	    var output = document.getElementById('output');
+	    console.log(event.target.files[0])
+	    output.src = URL.createObjectURL(event.target.files[0]);
+	    output.setAttribute('value', event.target.files[0].name)
+	  };
+
+	var loadSP = function (){
+		var dsSP = db.layDsSP()
+		dsSP.map(function(sp){
+			themSP(sp)
+		})
+	}
+
+	var themSP = function (sp){
+		var tr = document.createElement('tr')
+		tr.innerHTML =  '<tr >'+
+						'<th >'+sp.masp+'</th>'+
+						'<th data="'+sp.theloai+'">'+ db.loaiSP(sp.theloai) +'</th>'+
+						'<th >'+sp.gia+'</th>'+
+						'<th >'+sp.tensp+'</th>'+
+						'<th ><img src="../'+sp.image+'" ></th>'+
+						'<th >'+
+						'	<input type="button" onclick="suaSP(this)" name="sua" value="Edit">'+
+						'	<input type="button" onclick="xoaSP(this)" name="Xoa" value="Delete">'+
+						'</th>'+
+					'</tr>'
+		document.querySelector('.danhsachsp tbody').appendChild(tr)
+
+	}
+
+	var editingSP = null
+	function hienPopUp(spSua){
+		var popup = document.querySelector('#popup')
+		popup.style.display = 'block'
+
+		popup.style.top = (document.querySelector('body').clientHeight - popup.clientHeight)/2 + document.querySelector('body').scrollTop + "px"
+		popup.style.left = (document.querySelector('body').clientWidth - popup.clientWidth)/2 + "px"
+
+		// Xoa trang form add sp
+		var fields = popup.querySelectorAll('.thuoctinh')
+		for(var item of fields.values()) { 
+		  console.log(item.nodeName); 
+		  if (item.nodeName=='IMG')  {
+		  	item.src='hinhanh/no image.png'
+		  }else{
+		  	item.value = ""
+		  }
+		}
+		popup.querySelector('button.action').innerText = "Add"
+		popup.querySelector('button.action').setAttribute('onclick', "themSPClick()")
+		fields[0].removeAttribute('disabled')
+
+		// Truong hop edit, fill thuoc tinh SP vo form
+		if (!spSua) return 
+		// Luu vet sp dang sua
+		editingSP = spSua
+		var thuocTinhSP = spSua.parentElement.parentElement.querySelectorAll('th')
+
+		popup.querySelector('button.action').innerText = "Save"
+		popup.querySelector('button.action').setAttribute('onclick', "luuSPClick()")
+		fields[0].setAttribute('disabled','disabled')
+		// Lap qua danh sach th de lay data 
+		thuocTinhSP.forEach(function(value, index){
+			if (fields[index]){
+				console.log(value.childElementCount, value)
+				// Neu th co child thi co nghia la cell hinh anhd
+				if (value.childElementCount > 0)
+					fields[index].src = value.querySelector('img').src
+				// nguoc lai thi la text
+				else{
+					if (fields[index].nodeName=='SELECT')
+						fields[index].value = value.getAttribute('data')
+					else
+						fields[index].value = value.innerText.trim()
+				}
+
+			}
+		})
+		
+
+	}
+	document.querySelector("#addproduct").addEventListener("click", function(event) {
+		event.preventDefault()
+		hienPopUp()
+		return false
+	})
+
+	// showAddProduct()
+	function closeAddProduct(){
+		
+		var popup = document.querySelector('#popup')
+		popup.style.display = 'none'
+	}
+	function xoaSP(a){
+		//a.parentElement.parentElement.remove()
+		var txt;
+		var t = confirm("Ban co muon xoa san pham ko");
+		if (t == true) {
+			var masp = a.parentElement.parentElement.querySelector('th').innerText.trim()
+			db.xoaSP(masp)
+			txt = a.parentElement.parentElement.remove();
+		}
+	}
+	function suaSP(sp){
+		//console.log(sp.parentElement.parentElement.querySelectorAll('th'))
+		hienPopUp(sp)
+	}
+	function luuSPClick(fields){
+		var popup = document.querySelector('#popup')
+		var fields = popup.querySelectorAll('.thuoctinh')
+		
+		var thuocTinhSP = editingSP.parentElement.parentElement.querySelectorAll('th')
+		thuocTinhSP.forEach(function(value, index){
+			if (fields[index]){
+				console.log(value.childElementCount, value)
+				// Neu th co child thi co nghia la cell hinh anhd
+				if (value.childElementCount > 0)
+					value.querySelector('img').src = fields[index].src
+				// nguoc lai thi la text
+				else{
+
+					if (fields[index].nodeName=='SELECT'){
+						console.log(1111, fields[index].value,fields[index].querySelector('option[value="'+fields[index].value+'"]').innerText )
+
+						value.setAttribute('data', fields[index].value)
+						value.innerText = fields[index].querySelector('option[value="'+fields[index].value+'"]').innerText
+					}
+					else
+						value.innerText = fields[index].value
+				}
+
+			}
+		})
+		closeAddProduct()
+		// luu vo db
+		var sp = {
+			masp:fields[0].value.trim(),
+			theloai:fields[1].value.trim(),
+			gia:fields[2].value.trim(),
+			tensp:fields[3].value.trim(),
+		}
+		if (fields[4].getAttribute('value'))
+			sp.image = 'img/'+ fields[1].value.trim()+ '/' + fields[4].getAttribute('value')
+		console.log(sp)
+		db.suaSP(sp)
+
+	}
+	function themSPClick(fields){
+		var popup = document.querySelector('#popup')
+		var fields = popup.querySelectorAll('.thuoctinh')
+		var index = 0
+
+		var sp = {
+			masp:fields[0].value.trim(),
+			theloai:fields[1].value.trim(),
+			gia:fields[2].value.trim(),
+			tensp:fields[3].value.trim(),
+			image: 'img/'+ fields[1].value.trim()+ '/' + fields[4].getAttribute('value')
+		}
+
+		db.themSP(sp)
+		themSP(sp)
+		// var tr = document.createElement('tr')
+		// tr.innerHTML =  '<tr >'+
+		// 				'<th >'+fields[index++].value+'</th>'+
+		// 				'<th data="'+fields[index].value+'">'+fields[index].querySelector('option[value="'+fields[index++].value+'"]').innerText+'</th>'+
+		// 				'<th >'+fields[index++].value+'</th>'+
+		// 				'<th >'+fields[index++].value+'</th>'+
+		// 				'<th ><img src="'+fields[index++].getAttribute('src')+'" ></th>'+
+		// 				'<th >'+
+		// 				'	<input type="button" onclick="suaSP(this)" name="sua" value="Edit">'+
+		// 				'	<input type="button" onclick="xoaSP(this)" name="Xoa" value="Delete">'+
+		// 				'</th>'+
+		// 			'</tr>'
+		// document.querySelector('.danhsachsp tbody').appendChild(tr)
+		// var thuocTinhSP = editingSP.parentElement.parentElement.querySelectorAll('th')
+		// thuocTinhSP.forEach(function(value, index){
+		// 	if (fields[index]){
+		// 		console.log(value.childElementCount, value)
+		// 		// Neu th co child thi co nghia la cell hinh anhd
+		// 		if (value.childElementCount > 0)
+		// 			value.querySelector('img').src = fields[index].value
+		// 		// nguoc lai thi la text
+		// 		else{
+
+		// 			if (fields[index].nodeName=='SELECT'){
+		// 				console.log(1111, fields[index].value,fields[index].querySelector('option[value="'+fields[index].value+'"]').innerText )
+
+		// 				value.setAttribute('data', fields[index].value)
+		// 				value.innerText = fields[index].querySelector('option[value="'+fields[index].value+'"]').innerText
+		// 			}
+		// 			else
+		// 				value.innerText = fields[index].value
+		// 		}
+
+		// 	}
+		// })
+		closeAddProduct()
+	}
+
+	window.onload = function(){
+		loadSP()
+
+	}
+</script>
+</html>

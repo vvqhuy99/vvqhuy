@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web ban hang</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chitiet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="khungtrang">
+        <div class="header">
+                <div class="logo">
+                        <a href="index.html"><img src="img/logo.png" width="200px" height="40px" style="margin:30px;"></a>
+                      </div> 
+                      <div class="search">
+                            <form class="example">
+                            <input type="text" placeholder="Search.." id="val_search">
+                            <button type="button" onclick="search()"><i class="fa fa-search"></i></button>
+                            </form>
+                          </div>
+                      <div class="cart">
+                        <ul id="mycart">
+                                <li><a href="giohang.html">GIỎ HÀNG <img src="img/cart.png"></a></li>
+                                <li><img src="img/dk.png"> <a href="dangky.html" id="singup">
+                                </a></li>
+                                <li><img src="img/dn.png"> <a href="dangnhap.html" id="login">
+                        </ul>
+                      </div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html" >TRANG CHỦ</a></li>
+                <li><a href="#">GIỚI THIỆU</a></li>
+                <li><a href="#">TIN TỨC</a></li>
+                <li><a href="#">LIÊN HỆ</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div id="left">
+                <p style="text-align:center; padding: 10px 0px;">LOẠI SẢN PHẨM</p>
+                <ul>
+                        <li><img src="img/apple.png"><a href="index.html?iphone?0?#left">IPHONE</a></li>
+                        <li><img src="img/samsungs.png"><a href="index.html?samsung?16?#left">SAMSUNG</a></li>
+                        <li><img src="img/mis.png"><a href="index.html?xiaomi?25?#left">XIAOMI</a></li>
+                        <li><img src="img/op.png"><a href="index.html?oppo?34?#left">OPPO</a></li>
+                        <li><img src="img/ibb.png"><a href="index.html?ipad?43?#left">IPAD</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <div class="thongbao"><h1>THÔNG TIN SẢN PHẨM<h1></div>
+                    <hr style="margin-top:10px;">
+                <div id="hinhsp">
+                </div>
+                <div id="chitiets">
+                </div>
+                <div id="thongtinsp">
+                        <p class="title">Thông số kỹ thuật : </p>
+                        <p><span class="l">Màn hình:</span><span class="r">	Super AMOLED, 6.0", Full HD+</span></p>
+                        <p><span class="l">Hệ điều hành:</span><span class="r">Android 8.0 (Oreo)</span></p>
+                        <p><span class="l">Camera sau:</span><span class="r">24 MP, 8 MP và 5 MP (3 camera)</span></p>
+                        <p><span class="l">Camera trước:</span><span class="r">24 MP</span></p>
+                        <p><span class="l">CPU:</span><span class="r">Exynos 9810 8 nhân 64 bit</span></p>
+                        <p><span class="l">RAM:</span><span class="r">8 GB</span></p>
+                        <p><span class="l">Bộ nhớ trong:</span><span class="r">64 GB</span></p>
+                        <p style="border-bottom:none;"><span class="l">Dung lượng pin:</span><span class="r">4500 mAh, có sạc nhanh</span></p>
+                </div>
+                <div id="danhgia">
+                    <hr>
+                    <h2>- Samsung Galaxy A7 (2018) lột xác với nhiều thay đổi mới mẻ từ thiết kế đến hiệu năng.
+                        Bên cạnh đó, đây cũng là chiếc smartphone đầu tiên của Samsung sở hữu cụm camera sau với 3 thấu kính ấn tượng.</h2>
+                        <p>- Chiếc điện thoại Samsung đầu tiên sở hữu 3 camera.</p>
+                       <p> - Samsung Galaxy A7 (2018) là chiếc smartphone đầu tiên của Samsung được trang bị cụm camera với 3 thấu kính có độ phân giải lần lượt là 24 MP, 8 MP và 5 MP.
+                    </p>
+                </div>
+            </div>
+        </div> 
+        <div class="footer">
+                <hr>
+                <img src="img/footer.png">
+            <div class="end">
+                <div id="support">
+                    <p style="color: red">HỖ TRỢ KHÁCH HÀNG</p>
+                    <p>
+                    Hotline đặt hàng: 1800-6963<br>
+                    (Miễn phí , 8-21h kể cả T7, CN)<br>
+                    Hotline: 1900-6035<br>
+                    (1000đ/phút , 8-21h kể cả T7, CN)</p>
+                </div>
+                <div id="about-me">
+                    <p style="color: red">THÔNG TIN</p>
+                    <p>Nguyễn Huy Thắng<br>
+                        Võ Văn Quang Huy<br>
+                        Nguyễn văn Thành<br>
+                        Đại học Sài Gòn<br>
+                        Khoa Công nghệ thông tin
+                    </p>
+                </div>
+                <div id="mang-xa-hoi">
+                    <p style="color: red">KẾT NỐI VỚI CHÚNG TÔI</p>
+                    <div style="float: left; margin-left: 75px; margin-right: 10px;"><a href="https://www.facebook.com/vovanquanghuy" target="_blank"><img src="img/facebook.png" width="40px" height="40px"></a></div>
+                    <div style="float: left; margin-right: 10px;"><a href="https://id.zalo.me/account/login?continue=https://oa.zalo.me/manage/dashboard "target="_blank"><img src="img/zalo.png" width="40px" height="40px"></a></div>
+                    <div style="float: left;"><a href="https://www.youtube.com/?gl=VN" target="_blank"><img src="img/youtube.png" width="40px" height="40px"></a></div>
+                </div>
+                <div id="thanh-toan">
+                    <p style="color: red;">PHƯƠNG THỨC THANH TOÁN</p>
+                    <div>
+                        <div style="float: left; margin-left: 60px; margin-right: 15px;"><img src="img/visa.png"></div>
+                        <div style="float: left; margin-right: 15px;"><img src="img/2tron.png"></div>
+                        <div style="float: left;"><img src="img/jcb.png"></div>
+                        <div style="float: left; margin-left: 60px; margin-right: 15px; margin-top: 15px;"><img src="img/money.png"></div>
+                        <div style="float: left; margin-right: 15px; margin-top: 15px; " ><img src="img/internet.png"></div>
+                        <div style="float: left; margin-right: 15px; margin-top: 15px;"><img src="img/tragop.png"></div>
+
+                    </div>
+                    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+                </div>  
+        </div>
+    </div>
+</body>
+    <script src="js/database.js"></script>
+    <script src="js/chitietsp.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/giohang.js"></script>
+</html>

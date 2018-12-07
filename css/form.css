@@ -1,0 +1,49 @@
+p{
+    margin:0;
+    padding:0;
+    padding-bottom:10px;
+
+  }
+  .body{
+    width:1000px;
+    height: 420px;
+    border: 1px solid black;
+    margin:auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .body h1{
+    padding-top: 10px;
+    color:blue;
+  } 
+  .thongtinkh{
+    margin-top: 40px;
+  }
+  .cot1{
+    padding-right:70px;    
+    padding:3px 20px;
+    margin: 0;
+  }
+  .cot1 p{
+    font-size: 20px;
+  font-weight: bold;
+  }
+  .cot2{
+    padding-left:70px;
+    margin:0;   
+  }
+  .cot2 p input{
+    width: 300px;
+    height: 25px;
+    width: 450px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+  }
+  .dong1 input{
+    width: 90px;
+    height: 40px;
+  }
+  .dk{
+    margin-left: 230px;
+  }

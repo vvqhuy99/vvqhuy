@@ -1,0 +1,398 @@
+*{
+	margin: 0;
+	/* padding: 0; */
+}
+body{
+	/*width: 100%;*/
+	height: auto;
+	margin: auto;
+}
+div#khungtrang{
+	margin: auto;
+	margin-top: 3px;
+	width: auto;
+}
+div#header{
+	/* width: 70%; */
+	height: 21px;
+	margin-top: 30px;
+}
+div#firts{
+	float: left;
+	/* padding-top: 30px; */
+}
+.search{
+	float: left;
+	width: 300px;
+	margin: auto;
+	/* padding-top: 30px; */
+}
+.search form{
+}
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    background: #f1f1f1;
+    display: block;
+}
+
+form.example button {
+    float: left;
+    width: 50px;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    height: 42px;
+}
+
+form.example button:hover {
+    background: #0b7dda;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.hinhanh div{
+		background: #00BFFF;
+		float: right;
+		width: 100px;
+		border-right:1px solid #000;
+		/* height: 19px; */
+		/* padding-bottom: 16px; */
+		/* display: block; */
+		/* vertical-align: middle; */
+}
+.hinhanh1, .hinhanh2{
+	/* float: left; */
+	padding: 8px 10px 12px;
+	/* width: 50px; */
+}
+.hinhanh2{
+	float: left;
+	/* padding: 10px; */
+	width: 50px;
+}
+.a1{
+	color:#000;
+	text-align: center;
+	text-decoration: none;
+}
+*{
+	margin: 0;
+	/* padding: 0; */
+	
+	text-decoration: none;
+}
+body{
+	/*width: 100%;*/
+	height: auto;
+	margin: auto;
+}
+div#khungtrang{
+	margin: auto;
+	margin-top: 3px;
+	width: auto;
+}
+div#header{
+	/* width: 70%; */
+	height: 21px;
+	margin-top: 30px;
+}
+div#firts{
+	float: left;
+	/* padding-top: 30px; */
+}
+.search{
+	float: left;
+	width: 300px;
+	margin: auto;
+	/* padding-top: 30px; */
+}
+.search form{
+}
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    background: #f1f1f1;
+    display: block;
+}
+
+form.example button {
+    float: left;
+    width: 50px;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    height: 42px;
+}
+
+form.example button:hover {
+    background: #0b7dda;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.hinhanh div{
+		background: #00BFFF;
+		float: right;
+		width: 100px;
+		border-right:1px solid #000;
+		padding-right: 0px;
+		margin-right: 15px;
+}
+.hinhanh1{
+	padding: 8px 10px 10px;
+}
+.hinhanh2, .hinhanh3{
+	/* float: left; */
+	padding: 8px 10px 12px;
+
+	/* width: 34px; */
+}
+
+.a1{
+	color:#000;
+	text-align: center;
+	text-decoration: none;
+}
+.hinhanh div:hover{
+	background: #E0F8EC;
+}
+.left
+{
+	clear: left;
+	background: white;
+	width: 180px;
+	padding-left: 15px;
+	padding-top: 20px;
+	float: left;
+}
+.left div:hover{
+	background: #E0F8EC;
+}
+.newproject{
+	border:2px solid #000;
+	font-size: 17px;
+	padding:8px 10px 12px;
+	margin-bottom: 30px;
+	background: #1bc5b6c4;
+	text-align: center;
+	text-decoration: none;
+	color: red;
+}
+.newproject div a:hover{
+	color: blue;
+}
+.edit{
+	border:2px solid #000;
+	font-size: 17px;
+	padding:8px 10px 12px;
+	margin-bottom: 30px;
+	background: #0e0e0e9e;	
+	text-align: center;
+}
+.delete{
+	border:2px solid #000;
+	font-size: 17px;
+	padding:8px 10px 12px;
+	margin-bottom: 30px;
+	background: #0e0e0e9e;
+	text-align: center;	
+}
+.user{
+	border:2px solid #000;
+	font-size: 17px;
+	padding:8px 10px 12px;
+	margin-bottom: 30px;
+	background: #0e0e0e9e;
+	text-align: center;	
+}
+
+.pages{
+	border:2px solid #000;
+	font-size: 17px;
+	padding:8px 10px 12px;
+	margin-bottom: 30px;
+	background: #0e0e0e9e;	
+	text-align: center;	
+}
+.a2{
+	color:#000;
+	text-decoration:none; 
+}
+.m1{
+	padding-left:5px;
+}
+.right{
+	margin-top: 45px;
+}
+.right-left{	
+	float: left;
+	background:#00BFFF ;
+
+	width: 500px;
+	margin-left: 30px;
+}
+.schedule{
+	float: left;
+	font-size: 17px;
+	border-right:0px solid #000;
+	margin-left: 30px;
+	padding:8px 10px 12px;
+}
+.report{
+	float: left;
+	font-size: 17px;
+	border-right:0px solid #000;
+	margin-left: 20px;
+	padding:8px 10px 12px;
+}
+.score{
+	float: left;
+	font-size: 17px;
+	border-right:0px solid #000;
+	margin-left: 20px;
+	padding:8px 10px 12px;
+}
+.right-left div:hover{
+	background: #6FC;
+}
+.a3{
+	color:#000;
+	text-decoration: none;WER567FG8UIOIU76
+}
+}
+.m3{
+	margin-right: 10px;
+}
+.m4{
+	margin-left: 10px;
+}
+.right-right{
+	float: left;
+	background: #0066ff;
+	
+	width: 620px;
+}
+.right-right div:hover{
+	background:  #99c2ff;
+}
+.supp{
+	float: right;
+	font-size: 17px;
+	margin-right: 20px;
+	padding:8px 10px 12px;
+	border-right:1px solid #000;
+}
+.profile{
+	float: right;
+	margin-right: 20px;
+	padding:8px 10px 12px;
+	border-right:0px solid #000;
+}
+.a5{
+	color: #ff0000;
+	text-decoration: none;
+}
+.footer{
+    clear: both;
+    width:100%;
+    height: 300px;
+   /* background: rgb(228, 228, 222);*/
+    text-align: center;
+}
+.end{
+    width: 100%;
+    background: floralwhite;
+    height: 200px;
+    font-family:'Times New Roman', 'Times', 'serif';
+}
+#about-me{
+    float: left;
+    width: 400px;
+    line-height: 30px;
+    margin-top: 20px;
+}
+#mang-xa-hoi{
+    float: left;
+    width: 300px;
+    line-height: 30px;
+    margin-top: 20px;
+}
+#thanh-toan{
+    float: left;
+    width: 300px;
+    line-height: 30px;
+    margin-top: 20px;
+}
+.online{
+    width: 1250px;
+    height: 50px;
+    margin-bottom: 20px;
+    background: #b5b4b482;
+    margin-left: 48px;
+}
+.nut{
+    float: left;
+}
+.chu{
+    float: left;
+    margin-top: 15px;
+    margin-left: 20px;
+    font-size: 20px;
+    font-family:'Times New Roman', 'Times', 'serif';
+}
+.qua{
+    float: right;
+    margin-top: 15px;
+    margin-right: 5px;
+    font-family:'Times New Roman', 'Times', 'serif';
+}
+form#qua input[type=text] {
+        font-size:17px;
+    }
+form#qua input[type=button]{
+    padding:5px; 
+    border-radius: 3px;
+    color: black;
+}
+
+
+.demo{
+	width: 1130px;
+}
+.demo table{
+	border:2px solid black;
+}
+.demo table th{
+	width: 200px;
+	height: 40px;
+	text-align: center;
+	border: 1px solid black;
+}
+.danhsachsp{
+	border: 2px solid ; width: 1000px;
+}
+.danhsachsp tr{
+	text-align: center;
+}
+.danhsachsp tr th{
+	height: 70px; width: 100px; border: 1px solid;
+}

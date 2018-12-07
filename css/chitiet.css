@@ -1,0 +1,157 @@
+.thongbao{
+    margin: auto;
+    margin-top: 5px;
+    width: 500px;
+}
+.thongbao h1{
+    text-align: center;
+    font-size: 25px;
+    text-decoration: underline;
+}
+#hinhsp{
+    float: left;
+    width: 600px;
+    height: 510px;
+    margin: 10px;
+}
+#hinhsp img{
+    margin-left: 50px;
+    width: 400px;
+    height: 500px;
+}
+#chitiets{
+    float: left;
+    width: 400px;
+    height: 250px;
+    margin: 10px;
+    margin-top: 50px;
+    border-bottom: 1px solid gray;
+}
+.ten{
+    color: darkorange;
+    margin-top: 10px;
+    font-size: 30px;
+    text-align: center;
+}
+.giasp{
+    color:#FF0000;
+    margin-top: 10px;
+    font-size: 30px;
+    text-align: center;
+}
+.baohanh{
+    font-size: 20px;
+    font-weight: bold;
+}
+.them{
+    margin-top: 20px;
+    margin-left: 130px;
+    width: 150px;
+    height:50px;
+}
+.hinh-san-pham{
+	float: left;
+}
+.hinh-san-pham > *{
+	margin: 10px;
+}
+.hinh-nho{
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.hinh-to{
+	height: 350px;
+	width: 350px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.hinh-to img{
+	height: 350px;
+	width: 350px;
+}
+.hinh-nho img{
+	height: 100px;
+	width: 100px;
+}
+
+.thong-tin-san-pham{
+	float: right;
+	margin: 70px;
+    width: 410px;
+}
+.thong-tin-san-pham{
+	margin-top: 10px;
+}
+.thong-tin-san-pham p{
+	font-size: 30px;
+}
+.thong-tin-san-pham span{
+	font-size: 20px;
+}
+.ttsp_them,.ttsp_mua{
+	background: white;
+	border: 2px solid gray;
+	padding: 15px 30px 15px 30px;
+	color: #000;
+	font-size: 15px;
+	transition: 0.3s;
+}
+.thong-tin-san-pham button:hover{
+	border: 2px solid #0034DD;
+	color: #0034DD;
+}
+.thong-tin-san-pham button:last-child:hover{
+	color: white;
+	background: red;
+	border: 2px solid red;
+}
+#thongtinsp{
+	float: right;
+    margin-right: 130px;
+    margin-top: -150px;
+}
+#thongtinsp p{
+	width: 400px;
+	padding: 5px;
+    border-bottom: 1px solid gray;
+    font-size: 18px;
+}
+#thongtinsp .l{
+	text-align: left;
+}
+#thongtinsp .r{
+	float: right;
+}
+#thongtinsp .title{
+	font-size: 22px;
+	border: none;
+}
+.danh-gia-san-pham{
+	float: left;
+	width: 500px;
+	margin-top: 8px;
+	box-sizing: content-box;
+	text-align: justify;
+}
+.ngan_chia{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	color: rgb(210, 210, 210);
+}
+.ten_sp{
+    margin-bottom: 10px;
+    color: #636363;
+}
+#danhgia{
+    float: left;
+    margin-top: 30px;
+    width: 100%;
+}
+#danhgia p{
+    font-size: 20px;
+}
