@@ -89,6 +89,16 @@ function xoa_all() {
 			<button type="button" class="xac_nhan_cart" onclick="xacnhanmuahang()">XÁC NHẬN MUA HÀNG</button>';
 	}	
 }
+
+function spCount(){
+	var spCountSpan = document.getElementById('sp_count'),
+		spCount = localStorage.length-1
+
+	if (spCountSpan)
+		spCountSpan.innerText = spCount
+}
+
 window.addEventListener('load',giohang);
 load_vao_cart();
 tinh_tien();
+spCount()
