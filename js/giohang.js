@@ -78,6 +78,7 @@ function xoa_all() {
 		var masp=box.ma_sp;
 		sum += parseFloat(sp[masp].gia);
 		var tong = document.getElementById('tong_tien');
+		if (tong)
 			tong.innerHTML ='<p style="text-align:center;">Thông tin đơn hàng:</p>\
 			<hr>\
 			<p>Số lượng:<span>'+chieudai+'</span></p>\

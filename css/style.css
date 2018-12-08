@@ -85,12 +85,12 @@ form.example::after {
 }
 .cart ul li{
     float:left;
-    width: 120px;
+    
     height: 35px;
     line-height: 35px;
     padding:0px 5px;
     text-align: center;
-    
+    margin-left: 10px;
     
 }
 .cart ul li:hover{
