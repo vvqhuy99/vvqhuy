@@ -32,14 +32,14 @@ function load_vao_cart(){
 			<div class="thong_tin_sp">\
 			<a href="chitiet.html?'+key_for_url+'"><p>'+sp[masp].tensp+'</p></a>\
 			<p style="font-size: 20px;">Cung cấp bởi NOVA</p>\
-			<a href="#"><p style="margin-top:40px; color:black; font-size: 20px;">Xóa</p></a>\
+			<a href="#" onclick="xoaSP("'+boxone+'")" style="underline"><p style="margin-top:40px; color:black; font-size: 20px;">Xóa</p></a>\
 			</div>\
 			<div class="gia_sp">\
 				<p>'+sp[masp].gia+'đ</p>\
 				<p style="text-decoration: line-through;">25.000.000đ</p>\
 				<p>-80%</p>\
 			</div>\
-			<div class="so_luong_cart">\
+			<div class="so_luong_cart" style="display:none">\
 				<form>\
 					<input type="text" value="1" class="soluongsp"><br>\
 					<input type="button" value="OK" style="width:40px; height: 30px;margin-top: 20px; font-size: 18px;">\
@@ -64,6 +64,11 @@ function xoa_all() {
 		window.location.assign('giohang.html');
 	}
 	else return false;
+}
+
+function xoaSP(spKey){
+	localStorage.removeItem(spKey)
+	window.location.reload()
 }
 // function xoa_cart() {
 // 	var delete_cart = document.getElementById('clear_all');
