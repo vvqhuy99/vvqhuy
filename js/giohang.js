@@ -32,7 +32,7 @@ function load_vao_cart(){
 			<div class="thong_tin_sp">\
 			<a href="chitiet.html?'+key_for_url+'"><p>'+sp[masp].tensp+'</p></a>\
 			<p style="font-size: 20px;">Cung cấp bởi NOVA</p>\
-			<a href="#" onclick="xoaSP("'+boxone+'")" style="underline"><p style="margin-top:40px; color:black; font-size: 20px;">Xóa</p></a>\
+			<a href="#" onclick="xoaSP(\''+boxone+'\')" style="underline"><p style="margin-top:40px; color:black; font-size: 20px;">Xóa</p></a>\
 			</div>\
 			<div class="gia_sp">\
 				<p>'+sp[masp].gia+'đ</p>\
@@ -101,7 +101,7 @@ function spCount(){
 		spCount = localStorage.length-1
 
 	if (spCountSpan)
-		spCountSpan.innerText = spCount
+		spCountSpan.innerText = '('+spCount+')'
 }
 
 window.addEventListener('load',giohang);
