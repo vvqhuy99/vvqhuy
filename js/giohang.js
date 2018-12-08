@@ -8,7 +8,7 @@ function giohang(){
                 danh_muc: thong_tin[0],
                 ma_sp: thong_tin[1]
             };
-			localStorage.setItem("box_" + localStorage.length-1, JSON.stringify(obj));
+			localStorage.setItem("box_" + (localStorage.length-1), JSON.stringify(obj));
             alert("Bạn đã thêm vào giỏ hàng thành công");
         });
     }
