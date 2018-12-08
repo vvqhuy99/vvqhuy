@@ -8,8 +8,9 @@ function giohang(){
                 danh_muc: thong_tin[0],
                 ma_sp: thong_tin[1]
             };
-			localStorage.setItem("box_" + (localStorage.length-1), JSON.stringify(obj));
+			localStorage.setItem("box_" + new Date().getTime(), JSON.stringify(obj));
             alert("Bạn đã thêm vào giỏ hàng thành công");
+            location.reload()
         });
     }
 }
@@ -17,8 +18,10 @@ function giohang(){
 function load_vao_cart(){
 	var chieudai=localStorage.length-1;
 	var sp = db.layDsSP()
-	for(i=0;i<chieudai;i++){
-		var boxone="box_"+i;
+	var cartKeys = Object.keys(localStorage).filter(function(key){return key.startsWith('box_')})
+	cartKeys.map(function(key){
+	//for(i=0;i<chieudai;i++){
+		var boxone= key;
 		if(localStorage.getItem(boxone)){
 			var box = JSON.parse(localStorage.getItem(boxone));
             var key_for_url = box.danh_muc+'?'+box.ma_sp;
@@ -47,20 +50,22 @@ function load_vao_cart(){
 			</div>\
 		</div>';
 		}
-    }
+    })
 }
 function xoa_all() {
 	var all=confirm('Bạn có muốn xóa không');
 	if(all==true){
-    	var temp = localStorage.length-1;
-    	for (var i = 0; i < temp; i++) {
-        	console.log('temp = ' + temp);
-        		if (localStorage.getItem('box_' + i)) {
-            	localStorage.removeItem('box_' + i);
+    	//var temp = localStorage.length-1;
+    	//for (var i = 0; i < temp; i++) {
+    	var cartKeys = Object.keys(localStorage).filter(function(key){return key.startsWith('box_')})
+		cartKeys.map(function(key){
+        	//console.log('temp = ' + temp);
+        	if (localStorage.getItem(key)) {
+            	localStorage.removeItem(key);
         	}
-        		console.log('dele = ' + 'deleted_box_' + i);
-        		localStorage.removeItem('deleted_box_' + i);
-		}
+    		//console.log('dele = ' + 'deleted_box_' + i);
+    		//localStorage.removeItem('deleted_box_' + i);
+		})
 		window.location.assign('giohang.html');
 	}
 	else return false;
@@ -75,10 +80,13 @@ function xoaSP(spKey){
 // }
 
  function tinh_tien(){
-	var chieudai=localStorage.length-1;
+	//var chieudai=localStorage.length-1;
 	var sum=0;
-	for(i=0;i<chieudai;i++){
-		var boxone="box_"+i;
+	// for(i=0;i<chieudai;i++){
+
+	var cartKeys = Object.keys(localStorage).filter(function(key){return key.startsWith('box_')})
+	cartKeys.map(function(key){
+		var boxone=key;
 		var box=JSON.parse(localStorage.getItem(boxone));
 		var masp=box.ma_sp;
 		sum += parseFloat(sp[masp].gia);
@@ -86,14 +94,14 @@ function xoaSP(spKey){
 		if (tong)
 			tong.innerHTML ='<p style="text-align:center;">Thông tin đơn hàng:</p>\
 			<hr>\
-			<p>Số lượng:<span>'+chieudai+'</span></p>\
+			<p>Số lượng:<span>'+cartKeys.length+'</span></p>\
 			<hr>\
 			<p>Tạm tính:<span>'+sum+' TRIỆU</span></p>\
 			<hr>\
 			<p>Thành tiền:<span>'+sum+' TRIỆU</span></p>\
 			<hr>\
 			<button type="button" class="xac_nhan_cart" onclick="xacnhanmuahang()">XÁC NHẬN MUA HÀNG</button>';
-	}	
+	})	
 }
 
 function spCount(){
